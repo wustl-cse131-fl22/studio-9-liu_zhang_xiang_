@@ -20,8 +20,24 @@ public class NameToHeight {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 
-		// FIXME
-		throw new NotYetImplementedException();
+		Map<String, Integer> team = new HashMap<>();
+		team.put("Yusheng Xiang", 186);
+		team.put("Jiaheng Zhang", 180);
+		team.put("Heming Liu", 180);
+		
+		while (true) {
+			System.out.print("Enter the name: ");
+			String inputName = in.next();
+			if (inputName == "quit") {
+				break;
+			} else {
+				if (team.get(inputName)!=null) {
+					System.out.println(team.get(inputName));
+				} else {
+					System.out.println("No such person.");
+				}
+			}
+		}
 
 	}
 }
