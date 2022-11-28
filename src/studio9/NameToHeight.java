@@ -21,14 +21,16 @@ public class NameToHeight {
 		Scanner in = new Scanner(System.in);
 
 		Map<String, Integer> team = new HashMap<>();
-		team.put("Yusheng Xiang", 186);
-		team.put("Jiaheng Zhang", 180);
-		team.put("Heming Liu", 180);
+		team.put("YushengXiang", 185);
+		team.put("JiahengZhang", 184);
+		team.put("HemingLiu", 183);
 		
 		while (true) {
 			System.out.print("Enter the name: ");
 			String inputName = in.next();
-			if (inputName == "quit") {
+			System.out.println("Entered name: " + inputName);
+			if (inputName.equals("quit")) {
+				System.out.println("Program ended.");
 				break;
 			} else {
 				if (team.get(inputName)!=null) {
